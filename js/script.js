@@ -11,12 +11,15 @@
  */
 function calcVolume () {
   // get user input
-	let radius = parseFloat(document.getElementById('radius').value)
+  let side_a = parseFloat(document.getElementById('side-a').value)
+	let side_b = parseFloat(document.getElementById('side-b').value)
+	let height = parseFloat(document.getElementById('height').value)
 
 
   // calculate the volume
-  let volume = (4/3) * Math.PI * radius ** 3 
+  let volume = (1/6) * side_b * side_a * height 
 
   // display the results
   document.getElementById('volume').innerHTML = "The volume is " + volume.toFixed(2) + "m<sup>3</sup>"
 }
+
